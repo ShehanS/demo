@@ -14,4 +14,7 @@ public interface DeviceRepository extends MongoRepository<Device, String> {
     List<Device> findByType(String type);
     @Query(value = "{\"_id\":?0}")
     List<Device> findById(ObjectId id);
+    @Query(value = "{\"_id\":?0}")
+    Device findOneById(ObjectId id);
+
 }
